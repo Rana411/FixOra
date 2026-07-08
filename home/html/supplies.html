@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Supplies - Home Safety</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-halved"></i>
+                <span>Emergency<span class="logo-highlight">Plan</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="plan.html"><i class="fas fa-map-location-dot"></i> Plan</a></li>
+                <li><a href="supplies.html" class="active"><i class="fas fa-kit-medical"></i> Supplies</a></li>
+                <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+                <li><a href="login.html"><i class="fas fa-right-to-bracket"></i> Logout</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">
+                <i class="fas fa-kit-medical"></i> 
+                Emergency Supplies
+            </h1>
+
+            <!-- Expiry Countdown -->
+            <div class="expiry-box">
+                <h3>
+                    <i class="fas fa-hourglass-half"></i> 
+                    Supplies Expiry Check
+                </h3>
+                <div id="countdown-timer">-- days</div>
+            </div>
+
+            <!-- Supplies Grid -->
+            <div class="supplies-grid">
+                
+                <!-- Water & Food -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-tint"></i> Water & Food</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Bottled water - 1 gallon/person/day</li>
+                        <li><i class="fas fa-check-circle"></i> Canned food (beans, tuna, vegetables)</li>
+                        <li><i class="fas fa-check-circle"></i> Dry biscuits & protein bars</li>
+                        <li><i class="fas fa-check-circle"></i> Manual can opener</li>
+                        <li><i class="fas fa-check-circle"></i> Baby food & formula (if needed)</li>
+                    </ul>
+                </div>
+
+                <!-- First Aid -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-first-aid"></i> First Aid Kit</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Prescription medications (2-week supply)</li>
+                        <li><i class="fas fa-check-circle"></i> Bandages, gauze, antiseptic</li>
+                        <li><i class="fas fa-check-circle"></i> Pain relievers & fever reducers</li>
+                        <li><i class="fas fa-check-circle"></i> Masks & gloves</li>
+                        <li><i class="fas fa-check-circle"></i> Thermometer & scissors</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Equipment -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Equipment</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Flashlight + extra batteries</li>
+                        <li><i class="fas fa-check-circle"></i> Battery-powered radio</li>
+                        <li><i class="fas fa-check-circle"></i> Power bank (portable charger)</li>
+                        <li><i class="fas fa-check-circle"></i> Duct tape & scissors</li>
+                        <li><i class="fas fa-check-circle"></i> Whistle for signaling</li>
+                    </ul>
+                </div>
+
+                <!-- Documents & Money -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-file-alt"></i> Documents & Money</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> ID copies (passport, driver's license)</li>
+                        <li><i class="fas fa-check-circle"></i> Insurance policies</li>
+                        <li><i class="fas fa-check-circle"></i> Birth certificates</li>
+                        <li><i class="fas fa-check-circle"></i> Cash (small bills & coins)</li>
+                        <li><i class="fas fa-check-circle"></i> Spare house & car keys</li>
+                    </ul>
+                </div>
+
+                <!-- Sanitation -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-soap"></i> Sanitation</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Hand sanitizer & soap</li>
+                        <li><i class="fas fa-check-circle"></i> Toilet paper & wet wipes</li>
+                        <li><i class="fas fa-check-circle"></i> Garbage bags & plastic ties</li>
+                        <li><i class="fas fa-check-circle"></i> Disinfectant spray</li>
+                        <li><i class="fas fa-check-circle"></i> Feminine hygiene products</li>
+                    </ul>
+                </div>
+
+                <!-- Clothing & Blankets -->
+                <div class="supply-category">
+                    <h3><i class="fas fa-vest"></i> Clothing & Shelter</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Change of clothes (warm & dry)</li>
+                        <li><i class="fas fa-check-circle"></i> Sturdy shoes & raincoat</li>
+                        <li><i class="fas fa-check-circle"></i> Blankets & sleeping bags</li>
+                        <li><i class="fas fa-check-circle"></i> Sun protection (hat, sunscreen)</li>
+                        <li><i class="fas fa-check-circle"></i> Emergency poncho</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Print Button -->
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i> Print Supplies List
+            </button>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2026 <strong>Emergency Plan</strong> — Protecting Families Worldwide</p>
+        <p class="footer-update">Last updated: <span id="footer-date"></span></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Emergency Plan</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-halved"></i>
+                <span>Fix<span class="logo-highlight">Ora</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="plan.html"><i class="fas fa-map-location-dot"></i> Plan</a></li>
+                <li><a href="supplies.html"><i class="fas fa-kit-medical"></i> Supplies</a></li>
+                <li><a href="contacts.html"><i class="fas fa-address-book"></i> Contacts</a></li>
+                <li><a href="login.html"><i class="fas fa-right-to-bracket"></i> Logout</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-circle-check"></i> Family Safety First
+                    </div>
+                    <h1>Prepare Your Home<br /><span>For Any Emergency</span></h1>
+                    <p>A well-prepared home emergency plan helps protect your family during crises. Start preparing today before it's too late.</p>
+                    <div class="hero-buttons">
+                        <a href="plan.html" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i> Start Your Plan
+                        </a>
+                        <a href="supplies.html" class="btn-secondary">
+                            <i class="fas fa-list-check"></i> View Supplies
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-icon">
+                        <i class="fas fa-house-chimney"></i>
+                    </div>
+                    <div class="floating-icon icon-2">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="floating-icon icon-3">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <div class="hero-circle"></div>
+                </div>
+            </section>
+
+            <!-- STATS -->
+            <section class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>4</h3>
+                    <p>Family Members</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-day"></i>
+                    <h3>3</h3>
+                    <p>Days of Supplies</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-route"></i>
+                    <h3>2</h3>
+                    <p>Escape Routes</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>5</h3>
+                    <p>Emergency Contacts</p>
+                </div>
+            </section>
+
+            <!-- QUICK TIPS -->
+            <section class="quick-tips">
+                <h2><i class="fas fa-lightbulb"></i> Quick Safety Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <strong>1 Gallon of Water</strong>
+                            <p>Per person, per day</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-battery-full"></i>
+                        <div>
+                            <strong>Battery Backup</strong>
+                            <p>For radio & flashlights</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <strong>Secure Documents</strong>
+                            <p>Keep them safe & dry</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-people-arrows"></i>
+                        <div>
+                            <strong>Meeting Point</strong>
+                            <p>Designate a safe spot</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2026 <strong>Emergency Plan</strong> — Protecting Families Worldwide</p>
+        <p class="footer-update">Last updated: <span id="footer-date"></span></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
