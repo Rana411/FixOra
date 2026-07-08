@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Fixora</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-wrench"></i>
+                <span>Fix<span class="logo-highlight">ora</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="services.html"><i class="fas fa-screwdriver-wrench"></i> Services</a></li>
+                <li><a href="about.html"><i class="fas fa-circle-info"></i> About</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li id="authLink"><a href="login.html"><i class="fas fa-right-to-bracket"></i> Logout</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">
+                <i class="fas fa-envelope"></i> 
+                Contact Us
+            </h1>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Contact Form -->
+                <div style="background: var(--bg-card); border-radius: var(--radius); padding: 35px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+                    <h3 style="color: var(--text-primary); margin-bottom: 20px;">Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="name" placeholder="Your name" required />
+                                <i class="fas fa-user input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <input type="email" id="email" placeholder="you@example.com" required />
+                                <i class="fas fa-envelope input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-wrapper">
+                                <input type="tel" id="phone" placeholder="+966 50 123 4567" />
+                                <i class="fas fa-phone input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="input-wrapper">
+                                <textarea id="message" rows="4" placeholder="Describe your issue..." style="width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 14px; font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); resize: vertical;"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div style="background: var(--bg-card); border-radius: var(--radius); padding: 35px; box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 20px;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 20px;">Get in Touch</h3>
+                        <div style="display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start;">
+                            <i class="fas fa-location-dot" style="font-size: 1.4rem; color: var(--accent);"></i>
+                            <div>
+                                <p style="font-weight: 600; color: var(--text-primary);">Address</p>
+                                <p style="color: var(--text-secondary);">123 Main Street, Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start;">
+                            <i class="fas fa-phone" style="font-size: 1.4rem; color: var(--accent);"></i>
+                            <div>
+                                <p style="font-weight: 600; color: var(--text-primary);">Phone</p>
+                                <p style="color: var(--text-secondary);"><a href="tel:+966501234567" style="color: var(--accent); text-decoration: none;">+966 50 123 4567</a></p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <i class="fas fa-envelope" style="font-size: 1.4rem; color: var(--accent);"></i>
+                            <div>
+                                <p style="font-weight: 600; color: var(--text-primary);">Email</p>
+                                <p style="color: var(--text-secondary);"><a href="mailto:info@fixora.com" style="color: var(--accent); text-decoration: none;">info@fixora.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency -->
+                    <div style="background: var(--bg-card); border-radius: var(--radius); padding: 25px; box-shadow: var(--shadow); border: 2px solid var(--accent);">
+                        <h4 style="color: var(--text-primary); display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-triangle-exclamation" style="color: var(--accent);"></i>
+                            Emergency?
+                        </h4>
+                        <p style="color: var(--text-secondary);">Call us 24/7 for urgent repairs</p>
+                        <a href="tel:+966501234567" style="display: inline-block; margin-top: 10px; background: var(--gradient-primary); color: white; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700;">
+                            <i class="fas fa-phone"></i> +966 50 123 4567
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 <strong>Fixora</strong> — Professional Home Repair Services</p>
+        <p class="footer-update">Last updated: <span id="footer-date"></span></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

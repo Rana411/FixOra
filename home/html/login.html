@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Emergency Plan</title>
+    <title>Login - Fixora</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
-        /* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+        /* ===== LOGIN PAGE ===== */
         .login-page {
             min-height: 100vh;
             display: flex;
@@ -21,8 +21,8 @@
         .login-container {
             background: var(--bg-card);
             border-radius: var(--radius);
-            padding: 50px 45px;
-            max-width: 440px;
+            padding: 45px 40px;
+            max-width: 460px;
             width: 100%;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
@@ -46,7 +46,7 @@
 
         .login-header {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
@@ -57,14 +57,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .login-header h1 {
             font-size: 1.8rem;
             font-weight: 900;
             color: var(--text-primary);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .login-header p {
@@ -77,8 +77,73 @@
             z-index: 1;
         }
 
+        /* ===== ROLE SELECTOR ===== */
+        .role-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .role-option {
+            padding: 16px 12px;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--bg-primary);
+        }
+
+        .role-option:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .role-option.active {
+            border-color: var(--accent);
+            background: rgba(102, 126, 234, 0.08);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .role-option i {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            transition: 0.3s;
+        }
+
+        .role-option.active i {
+            color: var(--accent);
+        }
+
+        .role-option .role-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .role-option .role-desc {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-light);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .role-option.active .role-desc {
+            color: var(--accent);
+        }
+
+        .role-option input[type="radio"] {
+            display: none;
+        }
+
+        /* ===== FORM FIELDS ===== */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
@@ -119,14 +184,13 @@
 
         .form-group .input-wrapper input:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
         }
 
         .form-group .input-wrapper input:focus ~ .input-icon {
             color: var(--accent);
         }
 
-        /* ===== PASSWORD TOGGLE BUTTON ===== */
         .password-toggle {
             position: absolute;
             right: 16px;
@@ -138,9 +202,6 @@
             padding: 8px;
             transition: var(--transition);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .password-toggle:hover {
@@ -148,15 +209,11 @@
             background: rgba(102, 126, 234, 0.08);
         }
 
-        .password-toggle:active {
-            transform: scale(0.9);
-        }
-
         .form-options {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             flex-wrap: wrap;
             gap: 8px;
         }
@@ -186,7 +243,6 @@
         }
 
         .form-options a:hover {
-            color: var(--accent-hover);
             text-decoration: underline;
         }
 
@@ -216,7 +272,7 @@
 
         .login-footer {
             text-align: center;
-            margin-top: 24px;
+            margin-top: 22px;
             position: relative;
             z-index: 1;
         }
@@ -230,46 +286,17 @@
             color: var(--accent);
             text-decoration: none;
             font-weight: 700;
-            transition: 0.3s;
         }
 
         .login-footer a:hover {
-            color: var(--accent-hover);
             text-decoration: underline;
-        }
-
-        .social-login {
-            margin-top: 20px;
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .social-login a {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            border: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            transition: var(--transition);
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        .social-login a:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
         }
 
         .divider {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin: 20px 0 24px;
+            margin: 18px 0 22px;
         }
 
         .divider::before,
@@ -287,23 +314,32 @@
             white-space: nowrap;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 480px) {
-            .login-container {
-                padding: 35px 25px;
-            }
-
-            .login-header h1 {
-                font-size: 1.5rem;
-            }
-
-            .form-options {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .social-login {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
         }
 
-        /* ===== ERROR MESSAGE ===== */
+        .social-login a {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        .social-login a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
         .error-message {
             background: #fed7d7;
             color: #c53030;
@@ -320,8 +356,28 @@
             display: flex;
         }
 
-        .error-message i {
-            font-size: 1.1rem;
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+            .login-header h1 {
+                font-size: 1.4rem;
+            }
+            .role-selector {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .role-option {
+                padding: 14px 8px;
+            }
+            .role-option i {
+                font-size: 1.6rem;
+            }
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -332,10 +388,10 @@
             <!-- Header -->
             <div class="login-header">
                 <div class="logo-icon">
-                    <i class="fas fa-shield-halved"></i>
+                    <i class="fas fa-wrench"></i>
                 </div>
-                <h1>Welcome Back</h1>
-                <p>Sign in to manage your emergency plan</p>
+                <h1>Welcome to Fixora</h1>
+                <p>Sign in to book services or manage repairs</p>
             </div>
 
             <!-- Login Form -->
@@ -347,6 +403,22 @@
                     <span id="errorText">Invalid email or password</span>
                 </div>
 
+                <!-- ===== ROLE SELECTOR (بدون علامة الصح) ===== -->
+                <div class="role-selector">
+                    <label class="role-option active" id="customerRole">
+                        <input type="radio" name="role" value="customer" checked />
+                        <i class="fas fa-user"></i>
+                        <span class="role-title">Customer</span>
+                        <span class="role-desc">Book Services</span>
+                    </label>
+                    <label class="role-option" id="providerRole">
+                        <input type="radio" name="role" value="provider" />
+                        <i class="fas fa-user-tie"></i>
+                        <span class="role-title">Provider</span>
+                        <span class="role-desc">Manage Repairs</span>
+                    </label>
+                </div>
+
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email">Email Address</label>
@@ -356,14 +428,13 @@
                     </div>
                 </div>
 
-                <!-- Password with Toggle Button -->
+                <!-- Password -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="input-wrapper">
                         <input type="password" id="password" placeholder="••••••••" required />
                         <i class="fas fa-lock input-icon"></i>
-                        <!-- زر إظهار/إخفاء كلمة المرور -->
-                        <button type="button" class="password-toggle" id="togglePassword" aria-label="Toggle password visibility">
+                        <button type="button" class="password-toggle" id="togglePassword">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
@@ -391,15 +462,9 @@
 
                 <!-- Social Login -->
                 <div class="social-login">
-                    <a href="#" title="Google">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="#" title="Apple">
-                        <i class="fab fa-apple"></i>
-                    </a>
-                    <a href="#" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                 </div>
             </form>
 
@@ -413,17 +478,32 @@
 
     <script>
         // ==========================================
-        // TOGGLE PASSWORD VISIBILITY
+        // ROLE SELECTOR
+        // ==========================================
+        const customerRole = document.getElementById('customerRole');
+        const providerRole = document.getElementById('providerRole');
+
+        customerRole.addEventListener('click', function() {
+            this.classList.add('active');
+            providerRole.classList.remove('active');
+            document.querySelector('input[name="role"][value="customer"]').checked = true;
+        });
+
+        providerRole.addEventListener('click', function() {
+            this.classList.add('active');
+            customerRole.classList.remove('active');
+            document.querySelector('input[name="role"][value="provider"]').checked = true;
+        });
+
+        // ==========================================
+        // TOGGLE PASSWORD
         // ==========================================
         const togglePassword = document.getElementById('togglePassword');
         const passwordInput = document.getElementById('password');
 
         togglePassword.addEventListener('click', function() {
-            // Toggle the type attribute
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
-
-            // Toggle the icon
             const icon = this.querySelector('i');
             icon.classList.toggle('fa-eye');
             icon.classList.toggle('fa-eye-slash');
@@ -441,7 +521,9 @@
             const errorText = document.getElementById('errorText');
             const rememberMe = document.getElementById('rememberMe').checked;
 
-            // Simple validation
+            // Get selected role
+            const role = document.querySelector('input[name="role"]:checked').value;
+
             if (email === '' || password === '') {
                 errorText.textContent = 'Please fill in all fields';
                 errorMessage.classList.add('show');
@@ -449,22 +531,27 @@
             }
 
             // Demo credentials
-            if (email === 'demo@emergency.com' && password === 'password123') {
+            const validCustomer = email === 'demo@fixora.com' && password === 'password123';
+            const validProvider = email === 'provider@fixora.com' && password === 'provider123';
+
+            if (validCustomer || validProvider) {
                 errorMessage.classList.remove('show');
                 
-                // Save remember me preference
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userRole', role);
+                localStorage.setItem('userEmail', email);
+                
                 if (rememberMe) {
                     localStorage.setItem('rememberMe', 'true');
-                    localStorage.setItem('userEmail', email);
-                } else {
-                    localStorage.removeItem('rememberMe');
-                    localStorage.removeItem('userEmail');
                 }
-                
-                // Redirect to home page
-                window.location.href = 'index.html';
+
+                if (role === 'customer') {
+                    window.location.href = 'index.html';
+                } else {
+                    window.location.href = 'provider-dashboard.html';
+                }
             } else {
-                errorText.textContent = 'Invalid email or password. Try demo@emergency.com / password123';
+                errorText.textContent = 'Invalid credentials. Try: demo@fixora.com / password123 or provider@fixora.com / provider123';
                 errorMessage.classList.add('show');
             }
         }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Fixora</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-wrench"></i>
+                <span>Fix<span class="logo-highlight">ora</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="services.html" class="active"><i class="fas fa-screwdriver-wrench"></i> Services</a></li>
+                <li><a href="about.html"><i class="fas fa-circle-info"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li id="authLink"><a href="login.html"><i class="fas fa-right-to-bracket"></i> Logout</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">
+                <i class="fas fa-screwdriver-wrench"></i> 
+                Our Services
+            </h1>
+
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <i class="fas fa-faucet"></i>
+                    <h3>Plumbing</h3>
+                    <p>Pipe installation, leak repair, faucet replacement, water heater services</p>
+                    <span class="badge">From $50</span>
+                </div>
+
+                <div class="plan-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Electrical</h3>
+                    <p>Wiring, lighting installation, switch repair, circuit breaker services</p>
+                    <span class="badge">From $60</span>
+                </div>
+
+                <div class="plan-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>AC & HVAC</h3>
+                    <p>Air conditioning repair, maintenance, installation, heating systems</p>
+                    <span class="badge">From $80</span>
+                </div>
+
+                <div class="plan-card">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Carpentry</h3>
+                    <p>Furniture repair, door installation, cabinet making, woodwork</p>
+                    <span class="badge">From $45</span>
+                </div>
+
+                <div class="plan-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Painting</h3>
+                    <p>Interior & exterior painting, wall repair, wallpaper installation</p>
+                    <span class="badge">From $40</span>
+                </div>
+
+                <div class="plan-card">
+                    <i class="fas fa-trowel"></i>
+                    <h3>Masonry</h3>
+                    <p>Brickwork, tile installation, concrete repair, plastering</p>
+                    <span class="badge">From $70</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 <strong>Fixora</strong> — Professional Home Repair Services</p>
+        <p class="footer-update">Last updated: <span id="footer-date"></span></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
