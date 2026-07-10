@@ -544,10 +544,10 @@
                 if (rememberMe) {
                     localStorage.setItem('rememberMe', 'true');
                 }
-
+                
                 if (role === 'customer') {
-                    window.location.href = 'index.html';
-                } else {
+                    window.location.href = 'customer-dashboard.html';
+                } else if (role === 'provider') {
                     window.location.href = 'provider-dashboard.html';
                 }
             } else {
